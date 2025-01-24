@@ -1,12 +1,40 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import { IoMdCart } from "react-icons/io";
+import useCart from "../../../hooks/useCart";
 
 const NavBar = () => {
-
+    const [cart] = useCart();
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(result => console.log(result))
+    }
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Our Menu</Link></li>
         <li><Link to="/order/salad">Order Food</Link></li>
-        
+        <li><Link to="/secret">Secret</Link></li>
+        <li><Link to="/dashboard/cart">
+            <span className="text-3xl">
+                <IoMdCart />
+            </span>
+            <div className="badge badge-secondary ml-0">{cart?.length}</div>
+        </Link></li>
+
+
+        {
+            user ?
+                <>
+                    <button onClick={handleLogOut} className="btn btn-active btn-ghost">Log Out</button>
+                </> :
+                <>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/signup">Sign Up</Link></li>
+                </>
+        }
+
     </>
 
     return (
