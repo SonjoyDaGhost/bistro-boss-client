@@ -30,6 +30,6 @@ https://bistro-boss-1eb4c.web.app/
 
 1. Clone the repository:
 
-```bash
-git clone [https://github.com/](https://github.com/)<your-username>/bistro-boss.git
-<img src="https://i.ibb.co/kDQLvZR/image.png" />
+![My Project Screenshot](https://i.ibb.co/kDQLvZR/image.png)
+
+
