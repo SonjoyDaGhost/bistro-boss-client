@@ -26,9 +26,9 @@ https://bistro-boss-1eb4c.web.app/
 * **User Accounts (Optional):** Implement user accounts to enable features like order history, saved preferences, and loyalty programs.
 * **Admin Panel (Optional):** Develop an admin panel to manage menus, orders, customer data, and promotions.
 
-**Getting Started (For Developers):**
 
-1. Clone the repository:
+
+
 
 ![My Project Screenshot](https://i.ibb.co/kDQLvZR/image.png)
 
